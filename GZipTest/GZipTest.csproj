@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dataflow\ActionNode.cs" />
+    <Compile Include="Dataflow\NodeBase.cs" />
+    <Compile Include="Dataflow\TransformNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\BlockingQueue.cs" />
