@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,11 +44,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pipeline\Factory\IONodeFactory.cs" />
+    <Compile Include="Pipeline\IO\UserDataWriter.cs" />
+    <Compile Include="Pipeline\IO\UserDataReader.cs" />
+    <Compile Include="Pipeline\IO\GZipDataReader.cs" />
+    <Compile Include="Pipeline\IO\GZipDataWriter.cs" />
+    <Compile Include="Pipeline\GZipNode.cs" />
+    <Compile Include="Pipeline\DataBlock.cs" />
+    <Compile Include="Pipeline\GZipPipeline.cs" />
+    <Compile Include="Pipeline\IO\IONodeBase.cs" />
+    <Compile Include="Pipeline\NodeBase.cs" />
+    <Compile Include="Pipeline\Factory\GZipOperationFactory.cs" />
+    <Compile Include="Pipeline\StatusNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\BlockingQueue.cs" />
+    <Compile Include="Utilities\ByteArrayExtensions.cs" />
+    <Compile Include="Utilities\CustomThreadPool.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
