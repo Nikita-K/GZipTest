@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +47,18 @@
     <Compile Include="Dataflow\ActionNode.cs" />
     <Compile Include="Dataflow\NodeBase.cs" />
     <Compile Include="Dataflow\TransformNode.cs" />
+    <Compile Include="Pipeline\Compressor.cs" />
+    <Compile Include="Pipeline\ConsoleLogger.cs" />
+    <Compile Include="Pipeline\DataBlock.cs" />
+    <Compile Include="Pipeline\Decompressor.cs" />
+    <Compile Include="Pipeline\Factory\DataConsumerFactory.cs" />
+    <Compile Include="Pipeline\Factory\DataProducerFactory.cs" />
+    <Compile Include="Pipeline\Factory\DataTransformerFactory.cs" />
+    <Compile Include="Pipeline\GZipPipeline.cs" />
+    <Compile Include="Pipeline\IO\GZipDataReader.cs" />
+    <Compile Include="Pipeline\IO\GZipDataWriter.cs" />
+    <Compile Include="Pipeline\IO\UserDataReader.cs" />
+    <Compile Include="Pipeline\IO\UserDataWriter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\BlockingQueue.cs" />
@@ -54,5 +67,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
